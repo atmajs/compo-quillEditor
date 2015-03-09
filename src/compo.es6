@@ -178,7 +178,10 @@ var QuillCompo = mask.Compo({
 	},
 	set (str, el) {
 		if (this.editor == null) {
-			var $el = el == null ? mask.jmask(this) : $(el);
+            var $el = el == null ? this.$ : $(el);
+            if ($el == null) {
+                $el = mask.jmask(this);
+            }
 			$el.find('.a-ql-content').html(str);
 			return;
 		}
