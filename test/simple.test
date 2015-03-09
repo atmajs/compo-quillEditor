@@ -1,0 +1,24 @@
+UTest({
+	$config: {
+		timeout: 2000
+	},
+	'test a:typeahead component' (done) {
+		UTest
+			.server
+			.request('/examples/simple.html')
+			.done((document, window) => {
+				
+				var editor = window.app.find('a:quillEditor');
+				is_(editor, 'Object');
+
+				var $content = editor.$.find('.a-ql-content');
+				$content
+					.eq_('length', 1)
+					.hasNot_('i');
+
+				editor.set('<i>Hello</i>');
+				$content.has_('i');
+				done();
+			})
+	}
+})

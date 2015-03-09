@@ -1,0 +1,27 @@
+{
+  "name": "compo-quillEditor",
+  "version": "0.8.8",
+  "homepage": "https://github.com/atmajs/compo-quillEditor",
+  "authors": [
+    "Alex Kit <alex.kit@atmajs.com>"
+  ],
+  "description": "Quill Editor wrapper for MaskJS",
+  "main": "lib/quill.js",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "build",
+    "src"
+  ],
+  "devDependencies": {
+    "maskjs": "0.12.7",
+    "includejs": "latest"
+  },
+  "dependencies": {
+    "quill": "~0.19.8"
+  }
+}

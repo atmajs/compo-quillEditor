@@ -1,0 +1,32 @@
+UTest({
+	$config: {
+		timeout: 2000
+	},
+	'test a:typeahead component' (done) {
+		UTest
+			.server
+			.request('/examples/binded.html')
+			.done((document, window) => {
+				
+				var editor = window.app.find('a:quillEditor');
+				is_(editor, 'Object');
+
+				var $content = editor.$.find('.a-ql-content');
+				$content
+					.eq_('length', 1)
+					.has_('i')
+					.has_('text', 'Foo')
+					.hasNot_('text', 'FooBar')
+					;
+
+				editor.model.foo = '<b>FooBar</b>';
+				$content
+					.has_('b')
+					.hasNot_('i')
+					.has_('text', 'FooBar')
+					;
+
+				done();
+			})
+	}
+})
