@@ -1,6 +1,6 @@
 {
   "name": "compo-quillEditor",
-  "version": "0.8.10",
+  "version": "0.8.11",
   "homepage": "https://github.com/atmajs/compo-quillEditor",
   "authors": [
     "Alex Kit <alex.kit@atmajs.com>"
@@ -18,9 +18,9 @@
     "src"
   ],
   "devDependencies": {
-    "maskjs": "latest"
   },
   "dependencies": {
-    "quill": "~0.19.8"
+    "quill": "~0.19.8",
+    "maskjs": "~0.12.8"
   }
 }
