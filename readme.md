@@ -20,7 +20,7 @@ Signal | Description
 
 ### Install
 ```bash
-bower install compo-quillEditor
+bower install compo-quilleditor
 ```
 
 ### API

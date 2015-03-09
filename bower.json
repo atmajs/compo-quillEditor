@@ -18,8 +18,7 @@
     "src"
   ],
   "devDependencies": {
-    "maskjs": "0.12.7",
-    "includejs": "latest"
+    "maskjs": "latest"
   },
   "dependencies": {
     "quill": "~0.19.8"
