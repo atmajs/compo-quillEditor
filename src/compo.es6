@@ -128,7 +128,7 @@ var QuillCompo = mask.Compo({
 	template: `
 		${TOOLBAR}
 
-		.a-ql-content style='${FILL}; height: auto' > :html > @placeholder (::text);
+		.a-ql-content style='${FILL}; height: auto; top: 40px;' > :html > @placeholder (::text);
 		
 		@placeholder (::node);
 	`,
@@ -154,7 +154,10 @@ var QuillCompo = mask.Compo({
 			if (this.xLive !== true) {
 				this.$.find('.ql-editor').on('blur', this.onBlur_.bind(this));
 			}
-		  	$$content.style.top = $$toolbar.scrollHeight + 'px';
+
+            var height = $$toolbar.scrollHeight;
+            if (height > 0)
+		  	   $$content.style.top = height + 'px';
 		}
 	},
 	meta: {
