@@ -1,6 +1,7 @@
 ### [Quill](http://quilljs.com/) Component Wrapper
 
-[![Bower version](https://badge.fury.io/bo/compo-quill.svg)](http://badge.fury.io/bo/compo-quill)
+[![Build Status](https://travis-ci.org/atmajs/compo-quillEditor.png?branch=master)](https://travis-ci.org/atmajs/compo-quillEditor)
+[![Bower version](https://badge.fury.io/bo/compo-quilleditor.svg)](http://badge.fury.io/bo/compo-quilleditor)
 
 ```scss
 a:quillEditor;
